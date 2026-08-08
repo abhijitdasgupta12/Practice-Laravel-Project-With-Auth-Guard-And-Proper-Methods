@@ -371,7 +371,7 @@
     <!-- Sidebar -->
     <aside class="sidebar">
       <div class="logo">
-        AdminPanel
+        Admin Panel
       </div>
 
       <nav aria-label="Main navigation">
@@ -409,8 +409,8 @@
         <h1>Dashboard</h1>
 
         <div class="admin-profile">
-          <div class="profile-avatar">A</div>
-          <span>Admin User</span>
+          <div class="profile-avatar">CT</div>
+          <span>{{auth()->guard('admin')->user()->name}}</span>
         </div>
       </header>
 
@@ -418,7 +418,7 @@
       <div class="content">
 
         <section class="welcome">
-          <h2>Welcome back, Admin!</h2>
+          <h2>Welcome back, {{auth()->guard('admin')->user()->name}}!</h2>
           <p>Here's what's happening with your application today.</p>
         </section>
 
