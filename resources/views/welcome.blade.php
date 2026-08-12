@@ -189,7 +189,7 @@
             <span>Remember me</span>
           </label>
 
-          <a href="/admin/forgot-password" class="forgot-password">
+          <a href="{{route('admin.password.sendemail')}}" id="forgotpassword" class="forgot-password">
             Forgot password?
           </a>
         </div>

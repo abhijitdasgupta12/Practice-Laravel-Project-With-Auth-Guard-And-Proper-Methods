@@ -585,7 +585,7 @@
         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
       },
       success: function (response) {
-        window.location.href = "{{route('adminloginpage')}}";
+        window.location.href = "{{route('admin.login.page')}}";
       },
       error: function (xhr) {
           console.error("ERROR: ",xhr.responseText);

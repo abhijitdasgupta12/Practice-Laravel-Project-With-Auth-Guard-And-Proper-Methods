@@ -237,8 +237,8 @@
         Enter your credentials to continue.
       </p>
 
-      <form action="/login" method="post">
-
+      <form action="{{route('user.post.login')}}" method="post">
+        @csrf
         <div class="form-group">
           <label for="email">Email address</label>
 
@@ -276,7 +276,7 @@
           </label>
 
           <a
-            href="/forgot-password"
+            href="{{route('user.password.sendemail')}}"
             class="forgot-password"
           >
             Forgot password?
@@ -295,7 +295,7 @@
 
       <p class="register-text">
         Don't have an account?
-        <a href="/register">Create an account</a>
+        <a href="{{route('user.signup')}}">Create an account</a>
       </p>
 
     </section>
