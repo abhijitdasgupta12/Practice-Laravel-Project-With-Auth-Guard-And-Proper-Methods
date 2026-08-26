@@ -3,10 +3,15 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ApiController;
 
 Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:sanctum');
 
+Route::post('/user-login', [ApiController::class, 'userlogin']);
+
+Route::middleware('auth:sanctum')->group(function(){
+    Route::post('/all-users', [ApiController::class, 'getallusers']);
+});
 // route::post('/adminlogin', [AuthController::class, 'adminLogin']);
