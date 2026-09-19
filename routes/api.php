@@ -13,5 +13,6 @@ Route::post('/user-login', [ApiController::class, 'userlogin']);
 
 Route::middleware('auth:sanctum')->group(function(){
     Route::post('/all-users', [ApiController::class, 'getallusers']);
+    Route::post('/logout', [ApiController::class, 'logout']);
 });
 // route::post('/adminlogin', [AuthController::class, 'adminLogin']);
